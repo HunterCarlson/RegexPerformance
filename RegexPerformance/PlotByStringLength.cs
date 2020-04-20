@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using XPlot.Plotly;
 
@@ -67,6 +68,12 @@ namespace RegexPerformance
             chart.WithTitle("Regex on 1000 iterations");
 
             chart.Show();
+
+            string html = chart.GetHtml();
+            using (var outFile = new StreamWriter(Path.Combine(Directory.GetCurrentDirectory(), "PlotByStringLength.html")))
+            {
+                outFile.WriteAsync(html);
+            }
         }
     }
 }
