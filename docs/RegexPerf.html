@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <div id="484d2bb5-12e2-49a1-a24b-9aa38db35581" style="width: 900px; height: 500px;"></div>
+        <script>
+            var data = [{"type":"scatter","x":[1,10,25,50,100,250,500,1000,5000],"y":[307,809,1939,3317,42798,59630,25464,103378,563693],"name":"Standard Regex"},{"type":"scatter","x":[1,10,25,50,100,250,500,1000,5000],"y":[196,260,228,366,682,1827,2916,5705,25749],"name":"Reused Regex"},{"type":"scatter","x":[1,10,25,50,100,250,500,1000,5000],"y":[4192,3668,3899,4091,5321,6193,5782,4691,15099],"name":"Compiled Regex"}];
+            var layout = {"title":"Regex on 1000 characters","xaxis":{"title":"Iteration Count","_isSubplotObj":true},"yaxis":{"title":"Ticks","_isSubplotObj":true}};
+            Plotly.newPlot('484d2bb5-12e2-49a1-a24b-9aa38db35581', data, layout);
+        </script>
+        <div id="689f3640-2686-42a8-812e-48e85a890467" style="width: 900px; height: 500px;"></div>
+        <script>
+            var data = [{"type":"scatter","x":[1,10,25,50,100,250,500,1000,5000],"y":[115270,48279,56881,49579,55748,56571,70109,111521,288062],"name":"Standard Regex"},{"type":"scatter","x":[1,10,25,50,100,250,500,1000,5000],"y":[1270,1365,2092,3078,4603,11384,23244,46521,208589],"name":"Reused Regex"},{"type":"scatter","x":[1,10,25,50,100,250,500,1000,5000],"y":[22285,4851,4838,5080,5949,6562,12674,9666,60515],"name":"Compiled Regex"}];
+            var layout = {"title":"Regex on 1000 iterations","xaxis":{"title":"String Length","_isSubplotObj":true},"yaxis":{"title":"Ticks","_isSubplotObj":true}};
+            Plotly.newPlot('689f3640-2686-42a8-812e-48e85a890467', data, layout);
+        </script>
+    </body>
+</html>
