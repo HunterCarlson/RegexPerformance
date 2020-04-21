@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <div id="596f18bc-bd63-4f2e-bbd9-293b804c6321" style="width: 900px; height: 500px;"></div>
+        <script>
+            var data = [{"type":"scatter","x":[1,10,25,50,100,250,500,1000,2000,3000,4000,5000],"y":[127517,70373,90252,84408,87262,108353,111081,112433,176566,225041,237017,276432],"name":"Standard Regex"},{"type":"scatter","x":[1,10,25,50,100,250,500,1000,2000,3000,4000,5000],"y":[533,768,1398,2638,4722,11366,22525,46616,84755,137366,172489,213734],"name":"Reused Regex"},{"type":"scatter","x":[1,10,25,50,100,250,500,1000,2000,3000,4000,5000],"y":[240534,3530,3607,3335,4428,5651,10514,17069,16260,43394,35251,74216],"name":"Compiled Regex"}];
+            var layout = {"title":"Regex on 1000 iterations","xaxis":{"title":"String Length","_isSubplotObj":true},"yaxis":{"title":"Ticks","_isSubplotObj":true}};
+            Plotly.newPlot('596f18bc-bd63-4f2e-bbd9-293b804c6321', data, layout);
+        </script>
+    </body>
+</html>

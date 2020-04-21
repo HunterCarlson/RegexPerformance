@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexPerformance", "RegexPerformance\RegexPerformance.csproj", "{E06B1996-6929-493A-9D2A-26B42E643D56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexPerformance", "RegexPerformance\RegexPerformance.csproj", "{F3A7CE84-26E6-4061-96F5-38F66BC1BD81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E06B1996-6929-493A-9D2A-26B42E643D56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E06B1996-6929-493A-9D2A-26B42E643D56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E06B1996-6929-493A-9D2A-26B42E643D56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E06B1996-6929-493A-9D2A-26B42E643D56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A7CE84-26E6-4061-96F5-38F66BC1BD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A7CE84-26E6-4061-96F5-38F66BC1BD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A7CE84-26E6-4061-96F5-38F66BC1BD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A7CE84-26E6-4061-96F5-38F66BC1BD81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C0AD6B37-CA6E-4990-8EDC-1684C2ACEC98}
+		SolutionGuid = {7861842B-A716-444F-B1DE-6B6F9E678427}
 	EndGlobalSection
 EndGlobal

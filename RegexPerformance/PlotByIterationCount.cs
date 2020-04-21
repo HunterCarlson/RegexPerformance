@@ -7,7 +7,7 @@ namespace RegexPerformance
 {
     internal class PlotByIterationCount
     {
-        public static void Plot(string pattern)
+        public static void Plot(string pattern, bool generateHtml = false)
         {
             var iterationCounts = new List<int>
             {
@@ -19,6 +19,9 @@ namespace RegexPerformance
                 250,
                 500,
                 1000,
+                2000,
+                3000,
+                4000,
                 5000
             };
 
@@ -72,10 +75,15 @@ namespace RegexPerformance
 
             chart.Show();
 
-            string html= chart.GetHtml();
-            using (var outFile = new StreamWriter(Path.Combine(Directory.GetCurrentDirectory(), "PlotByIterationCount.html") ))
+            if (generateHtml)
             {
-                outFile.WriteAsync(html);
+                string html = chart.GetHtml();
+
+                using var outFile = new StreamWriter(
+                    Path.Combine(PathUtil.GetSolutionBasePath(), "Plots", "PlotByIterationCount.html")
+                );
+
+                outFile.Write(html);
             }
         }
     }

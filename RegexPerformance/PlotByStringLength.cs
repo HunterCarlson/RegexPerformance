@@ -7,7 +7,7 @@ namespace RegexPerformance
 {
     public static class PlotByStringLength
     {
-        public static void Plot(string pattern)
+        public static void Plot(string pattern, bool generateHtml = false)
         {
             var stringLengths = new List<int>
             {
@@ -19,19 +19,25 @@ namespace RegexPerformance
                 250,
                 500,
                 1000,
+                2000,
+                3000,
+                4000,
                 5000
             };
 
             var regexTimer = new RegexTimer();
 
             List<RegexTimer.RegexTimerResult> timesStandard = stringLengths
-                .Select(stringLength => regexTimer.Standard(pattern, stringLength)).ToList();
+                .Select(stringLength => regexTimer.Standard(pattern, stringLength))
+                .ToList();
 
             List<RegexTimer.RegexTimerResult> timesStandardReused = stringLengths
-                .Select(stringLength => regexTimer.StandardReused(pattern, stringLength)).ToList();
+                .Select(stringLength => regexTimer.StandardReused(pattern, stringLength))
+                .ToList();
 
             List<RegexTimer.RegexTimerResult> timesCompiled = stringLengths
-                .Select(stringLength => regexTimer.Compiled(pattern, stringLength)).ToList();
+                .Select(stringLength => regexTimer.Compiled(pattern, stringLength))
+                .ToList();
 
             var graph1 = new Graph.Scatter
             {
@@ -69,10 +75,15 @@ namespace RegexPerformance
 
             chart.Show();
 
-            string html = chart.GetHtml();
-            using (var outFile = new StreamWriter(Path.Combine(Directory.GetCurrentDirectory(), "PlotByStringLength.html")))
+            if (generateHtml)
             {
-                outFile.WriteAsync(html);
+                string html = chart.GetHtml();
+
+                using var outFile = new StreamWriter(
+                    Path.Combine(PathUtil.GetSolutionBasePath(), "Plots", "PlotByStringLength.html")
+                );
+
+                outFile.Write(html);
             }
         }
     }
