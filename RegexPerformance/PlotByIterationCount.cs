@@ -71,7 +71,7 @@ namespace RegexPerformance
 
             chart.WithXTitle("Iteration Count");
             chart.WithYTitle("Ticks");
-            chart.WithTitle("Regex on 1000 characters");
+            chart.WithTitle("Regex on 100 characters");
 
             chart.Show();
 
