@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Deedle" Version="2.1.2" />
-    <PackageReference Include="FSharp.Core" Version="4.7.1" />
+    <PackageReference Include="FSharp.Core" Version="4.7.2" />
     <PackageReference Include="FSharp.Data" Version="3.3.3" />
     <PackageReference Include="Google.DataTable.Net.Wrapper" Version="4.0.0" />
     <PackageReference Include="MathNet.Numerics" Version="4.9.1" />
